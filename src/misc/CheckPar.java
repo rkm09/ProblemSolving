@@ -13,6 +13,7 @@ public class CheckPar {
     public static boolean checkParentheses(String in) {
         if(checkIsValid(in)) {
             while (in.contains("()") || in.contains("[]") || in.contains("{}")) {
+                // ensure assignment back to the variable else an infinite loop
                 in = in.replaceAll("\\(\\)", "")
                         .replaceAll("\\[\\]", "")
                         .replaceAll("\\{\\}", "");
